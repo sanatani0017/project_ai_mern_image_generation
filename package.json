@@ -1,0 +1,16 @@
+{
+  "name": "mern-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "client-install": "cd client && npm install",
+    "server-install": "cd server && npm install",
+    "postinstall": "npm run client-install && npm run server-install",
+    "client-build": "cd client && npm run build",
+    "server-start": "cd server && npm start",
+    "start": "concurrently \"npm run server-start\" \"npm start --prefix client\""
+  },
+  "dependencies": {
+    "concurrently": "^7.0.0"
+  }
+}
